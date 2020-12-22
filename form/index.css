@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;900&display=swap');
+
+.body {
+    min-width: 1000px;
+    min-height: 580px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+#radio-show:checked ~ .content {
+    display: grid;
+}
+
+#radio-show:checked ~ .under-content {
+    display: none;
+}
+
+#radio-close:checked ~ .content {
+    display: none;
+}
+
+#radio-close:checked ~ .under-content {
+    display: block;
+}
+
+.content {
+    width: 1000px;
+    height: 580px;
+    margin: 100px auto;
+    border-radius: 10px;
+    -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.35);
+    -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.35);
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.35);    
+    grid-template: 'indent-l header indent-up indent-r' 1fr 
+                    'indent-l info photo indent-r' 2fr
+                    'indent-l fieldset photo indent-r' 5fr
+                    'indent-l fieldset descr indent-r' 5fr
+                    'indent-l indent-b indent-b indent-r' 1fr
+                    /1fr 14fr 10fr 1fr;
+    overflow: hidden;
+    position: relative;
+}
+
+.content__upper-background {
+    position: absolute;
+    width: 1000px;
+    height: 163px;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-image: url(./img/fullBG.png);
+    transition: 0.5s linear;
+}
+
+.content__header {
+    grid-area: header;
+    color: rgb(35, 48, 65);
+}
+
+.font-changed {
+    font-family: 'Rubik', sans-serif;
+}
+
+.content__info {
+    grid-area: info;
+    font-size: large;
+    color: rgb(168, 189, 207);
+    transition: 0.5s linear;
+}
+
+.fieldset {
+    grid-area: fieldset;
+    border: none;
+    margin-top: 3px;    
+}
+
+.fieldset__child {
+    margin-bottom: 15px;
+}
+
+.fieldset:last-child {
+    margin-bottom: 0px;
+}
+
+.radio-controls{
+    width: 100%;
+    height: 10%;
+    min-height: 35px;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.radio-controls__radio-wrapper {
+    width: 33.34%;
+    background-color: rgb(180, 180, 180);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: linear, 0.5s;
+}
+
+.radio-controls__radio-wrapper:hover {
+    background-color: rgb(110, 110, 110);
+}
+
+#radio1:checked ~ .content .radio-controls__radio-wrapper[for="radio1"] {
+    background-color: seagreen;
+}
+
+#radio2:checked ~ .content .radio-controls__radio-wrapper[for="radio2"] {
+    background-color: sandybrown;
+}
+
+#radio3:checked ~ .content .radio-controls__radio-wrapper[for="radio3"] {
+    background-color: lightblue;
+}
+
+#radio1:checked ~ .content > .content__upper-background {
+    background-position-y: 0px;
+}
+
+#radio2:checked ~ .content > .content__upper-background {
+    background-position-y: -163px;
+}
+
+#radio3:checked ~ .content > .content__upper-background {
+    background-position-y: -326px;
+}
+
+#radio1:checked ~ .content .apply-button {
+    background-color: seagreen;
+}
+
+#radio2:checked ~ .content .apply-button {
+    background-color: sandybrown;
+}
+
+#radio3:checked ~ .content .apply-button {
+    background-color: lightblue;
+}
+
+#radio1:checked ~ .content .apply-button:hover {
+    background-color: rgb(116, 209, 157);
+}
+
+#radio2:checked ~ .content .apply-button:hover {
+    background-color: rgb(255, 204, 136);
+}
+
+#radio3:checked ~ .content .apply-button:hover {
+    background-color: rgb(118, 180, 201);
+}
+
+#radio2:checked ~ .content .content__info {
+    color: rgb(35, 48, 65);
+}
+
+.full-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+}
+
+.text-input {
+    width: 70%;    
+    background-color: rgb(180, 180, 180);
+    border: none;
+    border-radius: 5px;
+    padding: 0px 1px 0px 5px;
+    font-family: 'Rubik', sans-serif;    
+}
+
+.text-input:focus {
+    outline: none;        
+}
+
+.name-input {
+    width: 45%;
+    height: 100%;
+}
+
+.birth-date {
+    background-color: rgb(180, 180, 180);
+    border-radius: 5px;
+    width: 70%;
+    height: 10%;
+    color: rgb(84, 84, 84);
+    font-size: small;
+    padding: 0px 1px 0px 5px;
+}
+
+.birth-date__input {
+    border: none;
+    width: 50%;
+    height: 100%;
+    font-size: large;
+    background-color: transparent;
+    border-radius: 5px;  
+    padding: 0px 1px;
+    font-size: medium;
+    margin-left: 10px; 
+}
+
+.birth-date__input:focus {
+    outline: none;   
+}
+
+.tel {
+    display: block;
+    height: 10%;
+}
+
+.email-block{
+    width: 70%;
+    height: 20%;
+}
+
+.email-block__email {
+    display: block;
+    width: 100%;
+    height: 50%;
+    margin-bottom: 10px;
+}
+
+.checkbox-control__indicator {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 2px solid;
+    border-radius: 3px;
+    transition: 0.5s linear;
+}
+
+.checkbox-control__input:checked + .checkbox-control__indicator {
+    background-color: #3b88fd;
+    background-image: url('./img/check.png');
+    background-position: center;
+    background-size: contain;
+}
+
+#radio1:checked ~ .content .checkbox-control__indicator {
+    border-color: seagreen;
+}
+
+#radio2:checked ~ .content .checkbox-control__indicator {
+    border-color: sandybrown;
+}
+
+#radio3:checked ~ .content .checkbox-control__indicator {
+    border-color: lightblue;
+}
+
+#radio1:checked ~ .content .checkbox-control__input:checked + .checkbox-control__indicator {
+    background-color: seagreen;
+}
+
+#radio2:checked ~ .content .checkbox-control__input:checked + .checkbox-control__indicator {
+    background-color: sandybrown;
+}
+
+#radio3:checked ~ .content .checkbox-control__input:checked + .checkbox-control__indicator {
+    background-color: lightblue;
+}
+
+.apply-button {
+    display: flex;
+    width: 70%;
+    height: 20%;
+    transition: linear, 0.5s;
+    border-radius: 7px;
+    align-items: center;
+    justify-content: center;
+    font-size: larger;
+    font-weight: 600;
+}
+
+
+.content__type-photo {
+    position: relative;
+    grid-area: photo;
+}
+
+.photo {
+    position: absolute;
+    opacity: 0;        
+    width: 100%;
+    transition: 0.5s;
+}
+
+#radio1:checked ~ .content #photo1,
+#radio2:checked ~ .content #photo2,
+#radio3:checked ~ .content #photo3 {
+    opacity: 1;
+}
+
+.content__type-descr {
+    position: relative;
+    grid-area: descr;
+}
+
+.description__header {
+    top: -1em;
+    position: absolute;
+    color: rgb(35, 48, 65);
+    opacity: 0;
+    transition: linear 0.5s;
+}
+
+.description__text {
+    position: absolute;
+    top: 1em;
+    color: rgb(35, 48, 65);
+    opacity: 0;
+    transition: linear 0.5s;
+}
+
+#radio1:checked ~ .content #header1,
+#radio2:checked ~ .content #header2,
+#radio3:checked ~ .content #header3,
+#radio1:checked ~ .content #text1,
+#radio2:checked ~ .content #text2,
+#radio3:checked ~ .content #text3 {
+    opacity: 1;
+}
+
+.content__close-button {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-image: url(./img/cross.png);
+    background-size: contain;
+    left: 950px;
+    top: 20px;
+    transform: rotateZ(0deg);
+    transition: ease-in-out 0.5s;
+}
+
+.content__close-button:hover {
+    transform: rotateZ(90deg);    
+}
+
+.under-content {
+    position: relative;
+    width: 320px;
+    margin: 300px auto;
+    text-align: center;
+}
+
+.under-content__return-button {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+}
+
+.under-content__return-button::before{
+   display: block;
+   position: absolute;
+   content: "";
+   height: 2px;
+   width: 0;
+   background-color: black;
+   transition: width .5s ease-in-out, left .5s ease-in-out;
+   left: 50%;
+   bottom: 0;
+}
+
+.under-content__return-button::after{
+   display: block;
+   position: absolute;
+   content: "";
+   height: 2px;
+   width: 0;
+   background-color: black;
+   transition: width .5s ease-in-out;
+   left: 50%;
+   bottom: 0;
+}
+
+.under-content__return-button:hover::before{
+   width: 50%;
+   left: 0;
+}
+.under-content__return-button:hover::after{
+   width: 50%;
+}

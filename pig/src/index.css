@@ -1,0 +1,138 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: grid;
+    grid-template: 'header' 2fr
+                    'main' 17fr
+                    'buttons' 8fr
+                    /1fr;
+    margin: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+
+.header {
+    grid-area: header;
+    width: 100%;
+    background-color: rgb(29, 35, 43);  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-family: 'Century Gothic', sans-serif;
+    color: white;
+    font-size: x-large;
+    margin: 0;
+    padding: 0;
+}
+
+
+.content {
+    grid-area: main;
+    display: flex;
+    flex-flow: row nowrap;    
+    min-height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+
+.pig {
+    position: relative;
+    width: 95%;
+    overflow: hidden;
+}
+
+.pig_img {
+    width: 100%;
+    border-radius: 10px;  
+}
+
+.pig_info {
+    position: absolute;
+    left: 10px;    
+    font-family: 'Century Gothic', sans-serif;
+    color: white; 
+    -webkit-text-stroke: black 1px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+}
+
+.pig_name {
+    top: 60%;    
+    font-size: xx-large;    
+}
+
+.pig_age {
+    top: 80%;
+    font-size: large;
+}
+
+
+.buttons {
+    display: flex;    
+    grid-area: buttons;
+    justify-content: space-around;        
+}
+
+.button {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center, center;
+    box-shadow: 2px 5px 16px 0px #525c68, 5px 5px 15px 5px rgba(0,0,0,0);
+    border-radius: 60px;
+}   
+
+.cross {
+    background-image: url('./img/cross.png');    
+}
+
+.star {
+    background-image: url('./img/star.png');
+}
+
+.like {
+    background-image: url('./img/heart.png');
+}
+
+@keyframes swipe-r {
+    0% {
+        left: 0%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes swipe-l {
+    0% {
+        right: 0%;
+    }
+    100% {
+        right: 100%;
+    }
+}
+
+@keyframes swipe-up {
+    0% {
+        bottom: 0%;
+    }   
+    100% {
+        transform: rotate(360deg);
+        bottom: 100%;
+    }
+}
+
+.valid {
+    display: none;
+}

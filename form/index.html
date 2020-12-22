@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Try yourself</title>
+    <link rel="stylesheet" href="./index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">    
+  </head>
+  <body>
+    <input checked class="visually-hidden" type="radio" name="radio-sc" id="radio-show">
+    <input class="visually-hidden" type="radio" name="radio-sc" id="radio-close">
+    <input checked id="radio1" class="radio visually-hidden" name="radio" type="radio">
+    <input id="radio2" class="radio visually-hidden" name="radio" type="radio">
+    <input id="radio3" class="radio visually-hidden" name="radio" type="radio">
+    <main class="content">
+      <div class="content__upper-background"></div>
+      <h1 class="content__header font-changed">Испытай себя!</h1>
+      <p class="content__info font-changed">Подай заявку на соревнования по туризму и выживанию 
+        и проверь, на что способен</p>
+      <fieldset class="content__fieldset fieldset">
+        <div class="fieldset__child radio-controls">      
+          <label for="radio1" class="radio-controls__radio-wrapper font-changed">            
+            Бушкрафтер
+          </label>
+          <label for="radio2" class="radio-controls__radio-wrapper font-changed">            
+            Изгой
+          </label>
+          <label for="radio3" class="radio-controls__radio-wrapper font-changed">            
+            Альпинист
+          </label>
+        </div>
+        <div class="fieldset__child full-name">
+          <input class="full-name__first text-input name-input" type="text" placeholder="Ваше имя">
+          <input class="full-name__last text-input name-input" type="text" placeholder="Ваша фамилия">
+        </div>        
+        <div class="fieldset__child birth-date font-changed">
+          Дата Вашего рождения:
+          <input class="birth-date__input font-changed" type="date" placeholder="Дата Вашего рождения">
+        </div>
+        <input class="fieldset__child text-input tel font-changed" type="tel" placeholder="Ваш телефон">
+        <div class="fieldset__child email-block">
+          <input class="text-input email-block__email" type="email" placeholder="Ваш адрес электронной почты">
+          <label class="email-block__checkbox checkbox-control font-changed">
+            <input checked class="checkbox-control__input visually-hidden" type="checkbox">
+            <span class="checkbox-control__indicator"></span>
+            Хочу получать новости  
+          </label>
+        </div>
+        <label class="fieldset__child apply-button font-changed">        
+          <input class="apply-button__input visually-hidden" type="button">
+          Отправить заявку
+        </label>
+      </fieldset>
+      <div class="content__type-photo">
+        <img id="photo1" class="photo" src="./img/axe.webp" alt="Топор воткнут в полено в лесу">
+        <img id="photo2" class="photo" src="./img/island.png" alt="Берег тропического необитаемого острова">
+        <img id="photo3" class="photo" src="./img/ice-axe.png" alt="Два ледоруба воткнуты в скалу">
+      </div>
+      <section class="content__type-descr description">
+        <h3 id="header1" class="description__header font-changed">Бушкрафтер</h3>
+        <h3 id="header2" class="description__header font-changed">Изгой</h3>
+        <h3 id="header3" class="description__header font-changed">Альпинист</h3>
+        <p id="text1" class="description__text font-changed">
+          Отправляйтесь в лес со своим или выданным снаряжением и постарайтесь продержатся минимум месяц вдали от цивилизации отрезанным остального мира
+        </p>
+        <p id="text2" class="description__text font-changed">
+          Окажитесь на одном из множества необитаемых тропических островов мирового океана, будто вы пережили кораблекрушение или авиакатастрофу. Сможете ли вы дождаться спасения?
+        </p>
+        <p id="text3" class="description__text font-changed">
+          Проверьте, не боитесь ли вы высоты. Вас ждет серия восхождений на популярнейшие и высочайшие вершины планеты
+        </p>
+      </section>
+      <label class="content__close-button" for="radio-close"></label>
+    </main>
+    <div class="under-content">
+      <img class="under-content__img" src="./img/ozon.png" alt="ozon671games">
+      <p class="under-content__text font-changed">Ты думал что-то здесь будет?</p>
+      <label class="under-content__return-button font-changed" for="radio-show">Вернутся</label>
+    </div>
+  </body>
+</html>
