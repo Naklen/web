@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.visually-hidden {
+position: absolute;
+width: 1px;
+height: 1px;
+margin: -1px;
+border: 0;
+padding: 0;
+clip: rect(0 0 0 0);
+overflow: hidden;
+}
+
+.header {    
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 32px;
+    text-align: center;
+    padding-bottom: 8px;
+    position: sticky;
+    top: 0;
+}
+
+.header__first-letter_red {
+    color: red;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+}
+
+.header,
+.footer {
+    border-top: 1px solid rgb(225, 225, 225);
+    border-bottom: 1px solid rgb(225, 225, 225);
+}
+
+.carousel{
+    position: relative;
+    width: 0px;
+    margin: auto;
+    height: 600px;
+}
+
+.carousel__item {
+    position: absolute;
+    width: 400px;
+    display: inline-block;
+    transition: ease 1s;
+    top: 10%;
+    box-sizing: content-box;
+    padding-top: 65px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.carousel__img {
+    width: 100%;
+}
+
+.carousel__label {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    transition: ease .5s;
+}
+
+.cat__name {
+    position: absolute;
+    top: 50%;
+    left: 40%;    
+    opacity: 0;
+    transition: ease .5s;
+    color: white;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: xx-large;
+}
+
+.switches {
+    width: 200px;
+    margin: auto;
+}
+
+.switch {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    background-color: rgb(185, 185, 185);
+    margin: 6px;
+    transition: ease .5s;
+}
+
+#radio1:checked ~ .carousel .item1:hover .cat__name,
+#radio2:checked ~ .carousel .item2:hover .cat__name,
+#radio3:checked ~ .carousel .item3:hover .cat__name,
+#radio4:checked ~ .carousel .item4:hover .cat__name,
+#radio5:checked ~ .carousel .item5:hover .cat__name {
+    opacity: 1;
+}
+
+#radio1:checked ~ .carousel .item1:hover .carousel__label,
+#radio2:checked ~ .carousel .item2:hover .carousel__label,
+#radio3:checked ~ .carousel .item3:hover .carousel__label,
+#radio4:checked ~ .carousel .item4:hover .carousel__label,
+#radio5:checked ~ .carousel .item5:hover .carousel__label {
+    opacity: .3;
+}
+#radio1:checked ~ .switches .switch[for="radio1"],
+#radio2:checked ~ .switches .switch[for="radio2"],
+#radio3:checked ~ .switches .switch[for="radio3"],
+#radio4:checked ~ .switches .switch[for="radio4"],
+#radio5:checked ~ .switches .switch[for="radio5"] {
+    background-color: gray;
+}
+
+#radio1:checked ~ .carousel  .item1 {
+    left: -200px;
+    padding-top: 0;
+}
+#radio1:checked ~ .carousel  .item2 {
+    width: 320px;
+    left: 250px;
+    opacity: 0.7;
+}
+#radio1:checked ~ .carousel  .item3 {
+    width: 320px;
+    left: 620px;
+    opacity: 0.7;
+}
+#radio1:checked ~ .carousel  .item4 {
+    width: 320px;
+    left: 990px;
+    opacity: 0.7;
+}
+#radio1:checked ~ .carousel  .item5 {
+    width: 320px;
+    left: 1360px;
+    opacity: 0.7;
+}
+
+#radio2:checked ~ .carousel  .item1 {
+    width: 320px;
+    left: -570px;
+    opacity: 0.7;
+}
+#radio2:checked ~ .carousel  .item2 {
+    left: -200px;
+    padding-top: 0;
+}
+#radio2:checked ~ .carousel  .item3 {
+    width: 320px;
+    left: 250px;
+    opacity: 0.7;
+}
+#radio2:checked ~ .carousel  .item4 {
+    width: 320px;
+    left: 620px;
+    opacity: 0.7;
+}
+#radio2:checked ~ .carousel  .item5 {
+    width: 320px;
+    left: 990px;
+    opacity: 0.7;
+}
+
+#radio3:checked ~ .carousel  .item1 {
+    width: 320px;
+    left: -940px;
+    opacity: 0.7;
+}
+#radio3:checked ~ .carousel  .item2 {
+    width: 320px;
+    left: -570px;
+    opacity: 0.7;
+}
+#radio3:checked ~ .carousel  .item3 {
+    left: -200px;
+    padding-top: 0;
+}
+#radio3:checked ~ .carousel  .item4 {
+    width: 320px;
+    left: 250px;
+    opacity: 0.7;
+}
+#radio3:checked ~ .carousel  .item5 {
+    width: 320px;
+    left: 620px;
+    opacity: 0.7;
+}
+
+#radio4:checked ~ .carousel  .item1 {
+    width: 320px;
+    left: -1310px;
+    opacity: 0.7;
+}
+#radio4:checked ~ .carousel  .item2 {
+    width: 320px;
+    left: -940px;
+    opacity: 0.7;
+}
+#radio4:checked ~ .carousel  .item3 {
+    width: 320px;
+    left: -570px;
+    opacity: 0.7;
+}
+#radio4:checked ~ .carousel  .item4 {
+    left: -200px;
+    padding-top: 0;
+}
+#radio4:checked ~ .carousel  .item5 {
+    width: 320px;
+    left: 250px;
+    opacity: 0.7;
+}
+
+#radio5:checked ~ .carousel  .item1 {
+    width: 320px;
+    left: -1680px;
+    opacity: 0.7;
+}
+#radio5:checked ~ .carousel  .item2 {
+    width: 320px;
+    left: -1310px;
+    opacity: 0.7;
+}
+#radio5:checked ~ .carousel  .item3 {
+    width: 320px;
+    left: -940px;
+    opacity: 0.7;
+}
+#radio5:checked ~ .carousel  .item4 {
+    width: 320px;
+    left: -570px;
+    opacity: 0.7;
+}
+#radio5:checked ~ .carousel  .item5 {
+    left: -200px;
+    padding-top: 0;
+}
+
+.modal-link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+#radio1:checked ~ .carousel .item1:hover .carousel__label .modal-link,
+#radio2:checked ~ .carousel .item2:hover .carousel__label .modal-link,
+#radio3:checked ~ .carousel .item3:hover .carousel__label .modal-link,
+#radio4:checked ~ .carousel .item4:hover .carousel__label .modal-link,
+#radio5:checked ~ .carousel .item5:hover .carousel__label .modal-link {
+    display: inline;
+}
+
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s ease;
+}
+
+.modal:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal__body {
+    display: flex;
+    min-height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 10px;
+}
+
+.modal__content{ 
+    color: white;
+    font-family: 'PT Sans Narrow', sans-serif;
+    width: 800px;
+    position: relative;
+}
+
+.modal__close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+}
+
+.modal__img {
+    display: block;
+    width: 400px;
+    float: left;
+    margin-right: 50px;
+}

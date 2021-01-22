@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>02-about-cats</title>
+    <link rel="stylesheet" href="./index.css">
+  </head>
+  <body>
+    <header class="header">
+      <span class="header__first-letter_red">М</span>урмаркет
+    </header>
+    <main class="main">
+      <input checked type="radio" name="radio" id="radio1" class="radio visually-hidden">
+      <input type="radio" name="radio" id="radio2" class="radio visually-hidden">
+      <input type="radio" name="radio" id="radio3" class="radio visually-hidden">
+      <input type="radio" name="radio" id="radio4" class="radio visually-hidden">
+      <input type="radio" name="radio" id="radio5" class="radio visually-hidden">
+      <div class="carousel">        
+        <div class="carousel__item item1 cat">
+          <label for="radio1" class="carousel__label"><a href="#modal1" class="modal-link"></a></label>
+          <img src="../img/c1.jpg" class="carousel__img" alt="">
+          <span class="cat__name">Барсик</span>
+        </div>
+        <div class="carousel__item item2 cat">
+          <label for="radio2" class="carousel__label"><a href="#modal2" class="modal-link"></a></label>
+          <img src="../img/c2.jpg" class="carousel__img" alt="">
+          <span class="cat__name">Пельмень</span>
+        </div>
+        <div class="carousel__item item3 cat">
+          <label for="radio3" class="carousel__label"><a href="#modal3" class="modal-link"></a></label>
+          <img src="../img/c3.jpg" class="carousel__img" alt="">
+          <span class="cat__name">Мурка</span>
+        </div>
+        <div class="carousel__item item4 cat">
+          <label for="radio4" class="carousel__label"><a href="#modal4" class="modal-link"></a></label>
+          <img src="../img/c4.png" class="carousel__img" alt="">
+          <span class="cat__name">Михал Палыч</span>
+        </div>
+        <div class="carousel__item item5 cat">
+          <label for="radio5" class="carousel__label"><a href="#modal5" class="modal-link"></a></label>
+          <img src="../img/c5.jpg" class="carousel__img" alt="">
+          <span class="cat__name">Кузя</span>
+        </div>
+      </div>
+      <div class="switches">
+        <label for="radio1" class="switch"></label>
+        <label for="radio2" class="switch"></label>
+        <label for="radio3" class="switch"></label>
+        <label for="radio4" class="switch"></label>
+        <label for="radio5" class="switch"></label>
+      </div>
+    </main>
+    <footer class="footer">Tut futer</footer>
+    <div id="modal1" class="modal">
+      <div class="modal__body">
+        <div class="modal__content">
+          <a href="#radio1" class="modal__close">X</a>
+          <img src="../img/c1.jpg" alt="" class="modal__img">
+          <h1 class="modal__header">Барсик</h1>
+          <p class="modal__info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quae ut architecto vitae laudantium ea natus blanditiis dolores?</p>
+        </div>
+      </div>
+    </div>
+    <div id="modal2" class="modal">
+      <div class="modal__body">
+        <div class="modal__content">
+          <a href="#radio2" class="modal__close">X</a>
+          <img src="../img/c2.jpg" alt="" class="modal__img">
+          <h1 class="modal__header">Пельмень</h1>
+          <p class="modal__info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quae ut architecto vitae laudantium ea natus blanditiis dolores?</p>
+        </div>
+      </div>
+    </div>
+    <div id="modal3" class="modal">
+      <div class="modal__body">
+        <div class="modal__content">
+          <a href="#radio3" class="modal__close">X</a>
+          <img src="../img/c3.jpg" alt="" class="modal__img">
+          <h1 class="modal__header">Мурка</h1>
+          <p class="modal__info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quae ut architecto vitae laudantium ea natus blanditiis dolores?</p>
+        </div>
+      </div>
+    </div>
+    <div id="modal4" class="modal">
+      <div class="modal__body">
+        <div class="modal__content">
+          <a href="#radio4" class="modal__close">X</a>
+          <img src="../img/c4.png" alt="" class="modal__img">
+          <h1 class="modal__header">Михал Палыч</h1>
+          <p class="modal__info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quae ut architecto vitae laudantium ea natus blanditiis dolores?</p>
+        </div>
+      </div>
+    </div>
+    <div id="modal5" class="modal">
+      <div class="modal__body">
+        <div class="modal__content">
+          <a href="#radio5" class="modal__close">X</a>
+          <img src="../img/c5.jpg" alt="" class="modal__img">
+          <h1 class="modal__header">Кузя</h1>
+          <p class="modal__info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quae ut architecto vitae laudantium ea natus blanditiis dolores?</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
