@@ -17,7 +17,13 @@ body {
     color: red;
 }
 
+.info-span {
+    display: block;
+}
 
+.cat__status {
+    padding-top: 10px;
+}
 
 @media screen and (max-width: 730px) {
     .main { 
@@ -26,7 +32,7 @@ body {
     }
     .cat {
         width: 90%;
-        margin: 0 10px;
+        margin: 20px 10px;
         padding: 0;
     }
     .cat__img {
@@ -36,4 +42,3 @@ body {
         display: none;
     }
 }
-
