@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+
+body { 
+    margin: 0;
+    padding: 0;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+aside {
+    display: none;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    border-top: 1px solid rgb(225, 225, 225);
+    border-bottom: 1px solid rgb(225, 225, 225);
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+
+.header__first-letter_red {
+    color: red;
+}
+
+.cat {
+    border: 1px solid rgb(225, 225, 225);
+}
+
+.info-span {
+    display: block;
+}
+
+.cat__status {
+    padding-top: 10px;
+}
+
+.footer {
+    padding: 10px;
+    border-top: 1px solid rgb(225, 225, 225);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    position: sticky;
+    bottom: 0;
+    background-color: white;
+}
+
+.footer__mail {
+    display: inline-block;
+    position: relative;
+    padding-left: 25px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #4c4cd8;
+}
+
+.footer__invite {
+    color: gray;
+}
+
+@media screen and (max-width: 730px) {
+    .main { 
+        width: 100%;
+        overflow-y: hidden;
+    }
+
+    .cat {
+        width: 90%;
+        margin: 20px;
+        padding: 0;
+    }
+
+    .cat__info {
+        padding-left: 20px;
+        padding-bottom: 10px;
+    }
+
+    .cat__img {
+        width: 100%;
+    }
+
+    .cat__desktop-info {
+        display: none;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer__mail::before {
+        content: '';
+        width: 20px;
+        height: 15px;
+        position: absolute;
+        background-image: url('../img/mail-icon.svg');
+        background-size: cover;
+        left: 0;
+        top: 0;
+    }
+}
+
+@media screen and (min-width: 730px) and (max-width: 1200px) {
+    .main {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; 
+        justify-content: space-around;       
+    }
+
+    .cat {
+        margin: 20px;
+        width: 28%;
+    }
+
+    .cat__img {
+        width: 100%;
+    }
+
+    .cat__desktop-info {
+        display: none;
+    }
+
+    .cat__info {
+        padding-left: 20px;
+        padding-bottom: 10px;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer__rights {
+        position: absolute;
+        top: 50%;
+        right: 5%;
+    }
+
+    .footer__mail::before {
+        content: '';
+        width: 20px;
+        height: 15px;
+        position: absolute;
+        background-image: url('../img/mail-icon.svg');
+        background-size: cover;
+        left: 0;
+        top: 0;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .wrapper {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template: 'main aside' 1fr
+                        /3fr 1fr;
+    }
+    .main {
+        grid-area: main;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; 
+        justify-content: space-around;       
+    }
+
+    .cat {
+        margin: 20px;
+        width: 45%;
+        display: grid;
+        grid-template: 'img info' 1fr
+                        'dskInfo dskInfo' 0.7fr
+                        /1fr 1fr;
+    }
+
+    .cat__img {
+        grid-area: img;
+        width: 85%;
+        margin: 10%;
+    }
+
+    .cat__info {
+        grid-area: info;
+    }
+
+    .cat__desktop-info {
+        padding-top: 20px;
+        grid-area: dskInfo;
+        border-top: 1px solid rgb(225, 225, 225);
+    }
+
+    .aside {
+        top: 0;
+        display: block;
+        grid-area: aside;
+        width: 100%;
+        height: 100%;
+        background-color: seagreen;        
+    }
+
+    .footer {
+        display: flex;        
+    }
+
+    .footer__rights {
+        position: absolute;
+        top: 25%;
+        right: 5%;
+    }
+}
